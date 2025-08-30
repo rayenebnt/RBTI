@@ -1495,3 +1495,31 @@ html, body{ overflow-x: hidden; }
     white-space: normal; /* garde tout visible, enlève si tu préfères une seule ligne */
   }
 }
+
+/* Dots pour carrousels (mobile/tablette) */
+@media (max-width: 991.98px){
+  .carousel-dots{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-top:16px;
+    user-select:none;
+  }
+  .carousel-dot{
+    width:8px; height:8px;
+    border-radius:999px;
+    background: rgba(0,0,0,.2);
+    transition: width .2s ease, background .2s ease, transform .2s ease;
+  }
+  .carousel-dot.is-active{
+    width:20px;
+    background: var(--orange-soda);
+    transform: translateY(-1px);
+  }
+  /* un peu d’air sous les listes pour les dots */
+  #property .has-scrollbar, 
+  #blog .has-scrollbar{
+    padding-bottom: 28px;
+  }
+}

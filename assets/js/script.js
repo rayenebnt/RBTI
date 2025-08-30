@@ -163,3 +163,90 @@
     });
   }
 })();
+
+/* ============================
+   Dots pour carrousels mobiles
+   Cible: #property .property-list.has-scrollbar
+          #blog .blog-list.has-scrollbar
+============================ */
+
+(function () {
+  const MOBILE_MAX = 991.98;
+
+  const lists = [
+    ...document.querySelectorAll('#property .has-scrollbar'),
+    ...document.querySelectorAll('#blog .has-scrollbar')
+  ];
+
+  function buildDots(list){
+    // évite doublons
+    if (list.__dotsBuilt) return;
+    list.__dotsBuilt = true;
+
+    const slides = Array.from(list.children);
+    const dotsWrap = document.createElement('div');
+    dotsWrap.className = 'carousel-dots';
+    dotsWrap.setAttribute('role','tablist');
+    dotsWrap.setAttribute('aria-label','Pagination du carrousel');
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot';
+      dot.setAttribute('type','button');
+      dot.setAttribute('role','tab');
+      dot.setAttribute('aria-label', `Aller à l’élément ${i+1}`);
+      dot.addEventListener('click', () => {
+        list.scrollTo({
+          left: Math.round(i * list.clientWidth),
+          behavior: 'smooth'
+        });
+      });
+      dotsWrap.appendChild(dot);
+    });
+
+    // insérer juste après la liste
+    list.parentNode.insertBefore(dotsWrap, list.nextSibling);
+
+    // garder une réf
+    list.__dotsWrap = dotsWrap;
+
+    // maj initiale
+    updateActiveDot(list);
+    // écouter le scroll pour maj active
+    list.addEventListener('scroll', () => updateActiveDot(list), { passive: true });
+  }
+
+  function destroyDots(list){
+    if (!list.__dotsBuilt) return;
+    list.__dotsBuilt = false;
+    if (list.__dotsWrap && list.__dotsWrap.parentNode){
+      list.__dotsWrap.parentNode.removeChild(list.__dotsWrap);
+    }
+    list.__dotsWrap = null;
+  }
+
+  function updateActiveDot(list){
+    if (!list.__dotsWrap) return;
+    const dots = list.__dotsWrap.querySelectorAll('.carousel-dot');
+    if (!dots.length) return;
+
+    // index basé sur la largeur visible (chaque slide = 100% en mobile)
+    const idx = Math.round(list.scrollLeft / list.clientWidth);
+    dots.forEach(d => d.classList.remove('is-active'));
+    const safeIdx = Math.max(0, Math.min(idx, dots.length - 1));
+    dots[safeIdx].classList.add('is-active');
+  }
+
+  function apply(){
+    const isMobile = window.innerWidth <= MOBILE_MAX;
+    lists.forEach(list => {
+      if (isMobile) buildDots(list);
+      else destroyDots(list);
+    });
+  }
+
+  // init + sur resize/orientation
+  apply();
+  window.addEventListener('resize', apply);
+  window.addEventListener('orientationchange', apply);
+})();
