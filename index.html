@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>RBTI — On devient votre locataire, pas un intermédiaire</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon (SVG + PNG fallbacks) -->
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icons/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/icons/favicon-16.png"
+    />
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+    <!-- Facultatif : ICO si tu peux le placer à la racine du domaine -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- ============================= -->
+    <!-- Header                       -->
+    <!-- ============================= -->
+    <header id="header" class="header" data-header>
+      <div class="overlay" data-overlay aria-hidden="true"></div>
+
+      <!-- Top bar: contacts + quick info -->
+      <div class="header-top" role="region" aria-label="Coordonnées">
+        <div class="container">
+          <ul class="header-top-list" role="list">
+            <li>
+              <a
+                href="mailto:rayenebentorkia@gmail.com"
+                class="header-top-link"
+              >
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                <span>rayenebentorkia@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:0625206493" class="header-top-link">
+                <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                <span>06 25 20 64 93</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="wrapper header-top-cta">
+            <p class="header-support">Disponible 7j/7 • Réponse sous 24h</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main nav -->
+      <div class="header-bottom">
+        <div class="container">
+          <a href="#home" class="logo" aria-label="Accueil RBTI">
+            <img src="./assets/images/logo-rbti.png" alt="Logo RBTI" />
+          </a>
+
+          <nav
+            class="navbar"
+            data-navbar
+            role="navigation"
+            aria-label="Navigation principale"
+          >
+            <div class="navbar-top">
+              <a href="#home" class="logo" aria-label="Accueil RBTI">
+                <img src="./assets/images/logo-rbti.png" alt="Logo RBTI" />
+              </a>
+              <button
+                class="nav-close-btn"
+                data-nav-close-btn
+                aria-label="Fermer le menu"
+              >
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+
+            <div class="navbar-bottom">
+              <ul class="navbar-list" role="list">
+                <li>
+                  <a href="#home" class="navbar-link" data-nav-link>Accueil</a>
+                </li>
+                <li>
+                  <a href="#about" class="navbar-link" data-nav-link
+                    >Pourquoi nous choisir ?</a
+                  >
+                </li>
+                <li>
+                  <a href="#service" class="navbar-link" data-nav-link
+                    >Nos Services</a
+                  >
+                </li>
+                <li>
+                  <a href="#property" class="navbar-link" data-nav-link
+                    >Notre méthode</a
+                  >
+                </li>
+                <li>
+                  <a href="#avantages" class="navbar-link" data-nav-link
+                    >Nos avantages</a
+                  >
+                </li>
+                <li>
+                  <a href="#blog" class="navbar-link" data-nav-link
+                    >Nos locataires</a
+                  >
+                </li>
+                <li>
+                  <a href="#footer" class="navbar-link" data-nav-link
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <!-- Mobile actions (open menu) -->
+          <div class="header-bottom-actions">
+            <button
+              class="header-bottom-actions-btn"
+              data-nav-open-btn
+              aria-label="Ouvrir le menu"
+            >
+              <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+              <span>Menu</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================= -->
+    <!-- Main                          -->
+    <!-- ============================= -->
+    <main id="main">
+      <article>
+        <!-- Hero -->
+        <section id="home" class="hero hero-rentup" aria-label="Introduction">
+          <div class="container">
+            <h1 class="h1 hero-title">
+              On devient votre locataire, pas un intermédiaire
+            </h1>
+            <p class="hero-subtitle">
+              <span
+                >Sous-location encadrée, loyer garanti, zéro gestion pour le
+                propriétaire.</span
+              >
+            </p>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="about" aria-labelledby="about-title">
+          <div class="container">
+            <figure class="about-banner">
+              <img
+                src="./assets/images/about-banner-1.png"
+                alt="Intérieur de maison moderne"
+              />
+              <img
+                src="./assets/images/about-banner-2.jpg"
+                alt="Salon lumineux et décoré"
+                class="abs-img"
+              />
+            </figure>
+
+            <div class="about-content">
+              <p class="section-subtitle">Pourquoi nous choisir ?</p>
+              <h2 id="about-title" class="h2 section-title">
+                Nous devenons votre locataire parfait
+              </h2>
+              <p class="about-text">
+                Nous signons un bail professionnel directement avec vous et
+                devenons votre locataire unique. Vous percevez chaque mois un
+                loyer fixe garanti, sans vacance, sans impayés et sans frais
+                cachés. Ensuite, nous sous-louons votre logement à une clientèle
+                soigneusement sélectionnée (salariés en déplacement, cadres,
+                voyageurs d’affaires) dans le respect de la loi et du règlement
+                de copropriété.
+              </p>
+
+              <ul class="about-list" role="list">
+                <li class="about-item">
+                  <div class="about-item-icon">
+                    <ion-icon
+                      name="shield-checkmark-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+                  <p class="about-item-text">
+                    Sécurité : votre bien est protégé et assuré
+                  </p>
+                </li>
+
+                <li class="about-item">
+                  <div class="about-item-icon">
+                    <ion-icon
+                      name="happy-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+                  <p class="about-item-text">
+                    Sérénité garantie : plus aucun souci de gestion
+                  </p>
+                </li>
+                <li class="about-item">
+                  <div class="about-item-icon">
+                    <ion-icon name="cash-outline" aria-hidden="true"></ion-icon>
+                  </div>
+                  <p class="about-item-text">
+                    Rentabilité assurée : un loyer fixe tous les mois
+                  </p>
+                </li>
+                <li class="about-item">
+                  <div class="about-item-icon">
+                    <ion-icon
+                      name="swap-horizontal-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+                  <p class="about-item-text">
+                    Flexibilité : récupérez votre bien quand vous le souhaitez
+                  </p>
+                </li>
+              </ul>
+
+              <p class="callout">
+                « Libérez-vous des contraintes, profitez de vos revenus en toute
+                tranquillité. »
+              </p>
+              <a href="#footer" class="btn">NOUS CONTACTER</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services -->
+        <section id="service" class="service" aria-labelledby="service-title">
+          <div class="container">
+            <p class="section-subtitle">Nos Services</p>
+            <h2 id="service-title" class="h2 section-title">
+              Notre engagement envers les propriétaires
+            </h2>
+
+            <ul class="service-list" role="list">
+              <li>
+                <article class="service-card">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/service-1.png"
+                      alt="Icône zéro contrainte"
+                    />
+                  </div>
+                  <h3 class="h3 card-title"><a href="#">Zéro contrainte</a></h3>
+                  <p class="card-text">
+                    Nous prenons en charge toute la gestion : ameublement, mise
+                    en ligne, sélection des sous-locataires, entretien et
+                    maintenance.
+                  </p>
+                  <a href="#footer" class="card-link"
+                    ><span>Nous contacter</span
+                    ><ion-icon
+                      name="arrow-forward-outline"
+                      aria-hidden="true"
+                    ></ion-icon
+                  ></a>
+                </article>
+              </li>
+              <li>
+                <article class="service-card">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/service-2.png"
+                      alt="Icône revenus assurés"
+                    />
+                  </div>
+                  <h3 class="h3 card-title"><a href="#">Revenus assurés</a></h3>
+                  <p class="card-text">
+                    Recevez un loyer fixe chaque mois, sans vacance ni impayés,
+                    peu importe l’occupation de votre bien.
+                  </p>
+                  <a href="#footer" class="card-link"
+                    ><span>Nous contacter</span
+                    ><ion-icon
+                      name="arrow-forward-outline"
+                      aria-hidden="true"
+                    ></ion-icon
+                  ></a>
+                </article>
+              </li>
+              <li>
+                <article class="service-card">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/service-3.png"
+                      alt="Icône liberté et protection"
+                    />
+                  </div>
+                  <h3 class="h3 card-title">
+                    <a href="#">Liberté et protection</a>
+                  </h3>
+                  <p class="card-text">
+                    Vous restez libre de récupérer votre bien à tout moment.
+                    Votre logement est assuré et protégé contre les
+                    dégradations.
+                  </p>
+                  <a href="#footer" class="card-link"
+                    ><span>Nous contacter</span
+                    ><ion-icon
+                      name="arrow-forward-outline"
+                      aria-hidden="true"
+                    ></ion-icon
+                  ></a>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Méthode / Étapes -->
+        <section id="property" class="property" aria-labelledby="process-title">
+          <div class="container">
+            <p class="section-subtitle">Notre méthode</p>
+            <h2 id="process-title" class="h2 section-title">
+              Un process simple 100% gagnant-gagnant !
+            </h2>
+
+            <ul class="property-list has-scrollbar" role="list">
+              <!-- Étape 1 -->
+              <li>
+                <article class="property-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/property-1.jpg"
+                      alt="Prise de rendez-vous"
+                      class="w-100"
+                    />
+                    <div class="card-badge orange">Étape 1</div>
+                    <figcaption class="banner-actions">
+                      <button class="banner-actions-btn" type="button">
+                        <ion-icon
+                          name="chatbubbles-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+                        <span>Prise de contact</span>
+                      </button>
+                    </figcaption>
+                  </figure>
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Prise de rendez-vous</h3>
+                    <p class="card-text">
+                      Premier échange pour comprendre votre bien et vos
+                      objectifs. Présentation claire de notre offre de
+                      sous-location.
+                    </p>
+                  </div>
+                </article>
+              </li>
+
+              <!-- Étape 2 -->
+              <li>
+                <article class="property-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/property-2.jpg"
+                      alt="Visite du logement"
+                      class="w-100"
+                    />
+                    <div class="card-badge green">Étape 2</div>
+                    <figcaption class="banner-actions">
+                      <button class="banner-actions-btn" type="button">
+                        <ion-icon
+                          name="home-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+                        <span>Visite & cadrage</span>
+                      </button>
+                    </figcaption>
+                  </figure>
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Visite du logement</h3>
+                    <p class="card-text">
+                      Évaluation du potentiel, vérification juridique
+                      (copropriété, règlement), estimation des revenus et du
+                      standing requis.
+                    </p>
+                  </div>
+                </article>
+              </li>
+
+              <!-- Étape 3 -->
+              <li>
+                <article class="property-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/signature.jpg"
+                      alt="Signature du bail"
+                      class="w-100"
+                    />
+                    <div class="card-badge orange">Étape 3</div>
+                    <figcaption class="banner-actions">
+                      <button class="banner-actions-btn" type="button">
+                        <ion-icon
+                          name="document-text-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+                        <span>Bail pro</span>
+                      </button>
+                    </figcaption>
+                  </figure>
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Signature du bail</h3>
+                    <p class="card-text">
+                      Signature d’un bail professionnel : nous devenons votre
+                      locataire unique avec loyer fixe garanti chaque mois.
+                    </p>
+                  </div>
+                </article>
+              </li>
+
+              <!-- Étape 4 -->
+              <li>
+                <article class="property-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/property-4.png"
+                      alt="Ameublement & décoration"
+                      class="w-100"
+                    />
+                    <div class="card-badge green">Étape 4</div>
+                    <figcaption class="banner-actions">
+                      <button class="banner-actions-btn" type="button">
+                        <ion-icon
+                          name="cube-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+                        <span>Ameublement</span>
+                      </button>
+                    </figcaption>
+                  </figure>
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Ameublement & décoration</h3>
+                    <p class="card-text">
+                      Nous équipons et décorons si nécessaire pour offrir une
+                      expérience haut de gamme aux sous-locataires.
+                    </p>
+                  </div>
+                </article>
+              </li>
+
+              <!-- Étape 5 -->
+              <li>
+                <article class="property-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/enligne.jpg"
+                      alt="Mise en ligne"
+                      class="w-100"
+                    />
+                    <div class="card-badge orange">Étape 5</div>
+                    <figcaption class="banner-actions">
+                      <button class="banner-actions-btn" type="button">
+                        <ion-icon
+                          name="cloud-upload-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+                        <span>Mise en ligne</span>
+                      </button>
+                    </figcaption>
+                  </figure>
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Mise en ligne</h3>
+                    <p class="card-text">
+                      Publication sur des plateformes adaptées, optimisation des
+                      annonces et pilotage des performances.
+                    </p>
+                  </div>
+                </article>
+              </li>
+
+              <!-- Étape 6 -->
+              <li>
+                <article class="property-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/entretien.jpg"
+                      alt="Gestion & entretien"
+                      class="w-100"
+                    />
+                    <div class="card-badge green">Étape 6</div>
+                    <figcaption class="banner-actions">
+                      <button class="banner-actions-btn" type="button">
+                        <ion-icon
+                          name="construct-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+                        <span>Gestion & entretien</span>
+                      </button>
+                    </figcaption>
+                  </figure>
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Gestion & entretien</h3>
+                    <p class="card-text">
+                      Accueil, assistance, ménage, maintenance et reporting
+                      mensuel : vous encaissez, nous gérons tout.
+                    </p>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Avantages -->
+        <section
+          id="avantages"
+          class="features"
+          aria-labelledby="features-title"
+        >
+          <div class="container">
+            <p class="section-subtitle">Nos avantages</p>
+            <h2 id="features-title" class="h2 section-title">
+              Pourquoi choisir notre solution ?
+            </h2>
+
+            <ul class="features-list" role="list">
+              <li>
+                <article class="features-card">
+                  <div class="card-icon">
+                    <ion-icon
+                      name="happy-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+                  <h3 class="card-title">Sérénité</h3>
+                  <p class="card-text">
+                    Nous gérons l’intégralité de votre bien sans frais cachés !
+                  </p>
+                </article>
+              </li>
+              <li>
+                <article class="features-card">
+                  <div class="card-icon">
+                    <ion-icon name="cash-outline" aria-hidden="true"></ion-icon>
+                  </div>
+                  <h3 class="card-title">Rentabilité</h3>
+                  <p class="card-text">
+                    Le paiement, tous les mois, de votre loyer est notre
+                    engagement N°1.
+                  </p>
+                </article>
+              </li>
+              <li>
+                <article class="features-card">
+                  <div class="card-icon">
+                    <ion-icon
+                      name="swap-horizontal-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+                  <h3 class="card-title">Flexibilité</h3>
+                  <p class="card-text">
+                    Vous pouvez récupérer votre bien quand vous le souhaitez.
+                  </p>
+                </article>
+              </li>
+              <li>
+                <article class="features-card">
+                  <div class="card-icon">
+                    <ion-icon
+                      name="document-text-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+                  <h3 class="card-title">Assurance</h3>
+                  <p class="card-text">
+                    Votre bien immobilier est protégé avec notre assurance
+                    contre les dégradations.
+                  </p>
+                </article>
+              </li>
+              <li>
+                <article class="features-card">
+                  <div class="card-icon">
+                    <ion-icon
+                      name="shield-checkmark-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+                  <h3 class="card-title">Sécurité</h3>
+                  <p class="card-text">
+                    Notre bail professionnel vous assure un loyer mensuel fixe
+                    et une rupture à tout moment.
+                  </p>
+                </article>
+              </li>
+              <li>
+                <article class="features-card">
+                  <div class="card-icon">
+                    <ion-icon
+                      name="construct-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+                  <h3 class="card-title">Entretien</h3>
+                  <p class="card-text">
+                    Des professionnels seront présents afin d’entretenir
+                    quotidiennement votre bien.
+                  </p>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Nos locataires -->
+        <section id="blog" class="blog" aria-labelledby="tenants-title">
+          <div class="container">
+            <p class="section-subtitle">Nos locataires</p>
+            <h2 id="tenants-title" class="h2 section-title">
+              Qui sont nos sous-locataires ?
+            </h2>
+
+            <ul class="blog-list has-scrollbar" role="list">
+              <li>
+                <article class="blog-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/deplacement.jpg"
+                      alt="Salariés en déplacement professionnel"
+                      class="w-100"
+                    />
+                  </figure>
+                  <div class="blog-content">
+                    <h3 class="h3 blog-title">
+                      Salariés en déplacement professionnel
+                    </h3>
+                    <p class="blog-text">
+                      Collaborateurs envoyés en mission courte durée (quelques
+                      jours à quelques semaines) par leur entreprise. Nous
+                      assurons un séjour confortable et sans friction.
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="blog-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/cadre.jpg"
+                      alt="Cadres et fournisseurs"
+                      class="w-100"
+                    />
+                  </figure>
+                  <div class="blog-content">
+                    <h3 class="h3 blog-title">
+                      Cadres, consultants & fournisseurs
+                    </h3>
+                    <p class="blog-text">
+                      Profils à hauts standards cherchant un logement
+                      prêt-à-vivre, bien situé et parfaitement entretenu le
+                      temps d’une mission.
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="blog-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/first.jpg"
+                      alt="Nouveaux arrivants en période d’essai"
+                      class="w-100"
+                    />
+                  </figure>
+                  <div class="blog-content">
+                    <h3 class="h3 blog-title">
+                      Nouveaux arrivants & période d’essai
+                    </h3>
+                    <p class="blog-text">
+                      Employés qui s’installent dans la région et ont besoin
+                      d’un logement temporaire en attendant leur solution long
+                      terme (achat ou bail classique).
+                    </p>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta" aria-labelledby="cta-title">
+          <div class="container">
+            <div class="cta-card">
+              <div class="card-content">
+                <h2 id="cta-title" class="h2 card-title">
+                  Marre des impayés et des soucis de gestion ?
+                </h2>
+                <p class="card-text">
+                  Confiez-nous votre bien et percevez un loyer fixe chaque mois.
+                </p>
+              </div>
+              <button
+                class="btn cta-btn"
+                type="button"
+                onclick="document.getElementById('header')?.scrollIntoView({ behavior: 'smooth' })"
+              >
+                <span>Commencer maintenant</span>
+                <ion-icon
+                  name="arrow-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- ============================= -->
+    <!-- Footer                        -->
+    <!-- ============================= -->
+    <footer id="footer" class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-brand">
+            <a href="#home" class="logo" aria-label="Accueil RBTI">
+              <img
+                src="./assets/images/logo-rbti.png"
+                alt="Logo RBTI"
+                width="200"
+                height="200"
+              />
+            </a>
+            <p class="section-text">
+              Sous-location professionnelle pour propriétaires : loyer fixe
+              garanti, zéro gestion, sécurité et entretien inclus. Nous devenons
+              votre locataire unique.
+            </p>
+            <ul class="contact-list" role="list">
+              <li>
+                <span class="contact-link">
+                  <ion-icon
+                    name="location-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+                  <address>Paris, France</address>
+                </span>
+              </li>
+              <li>
+                <a href="tel:+33625206493" class="contact-link">
+                  <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                  <span>+33 6 25 20 64 93</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:rayenebentorkia@gmail.com" class="contact-link">
+                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                  <span>rayenebentorkia@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-link-box">
+            <ul class="footer-list" role="list">
+              <li><p class="footer-list-title">Liens utiles</p></li>
+              <li><a href="#home" class="footer-link">Accueil</a></li>
+              <li>
+                <a href="#about" class="footer-link">Pourquoi nous choisir ?</a>
+              </li>
+              <li><a href="#property" class="footer-link">Notre méthode</a></li>
+              <li>
+                <a href="#avantages" class="footer-link">Nos avantages</a>
+              </li>
+              <li><a href="#blog" class="footer-link">Nos locataires</a></li>
+              <li><a href="#footer" class="footer-link">Contact</a></li>
+            </ul>
+
+            <ul class="footer-list" role="list">
+              <li><p class="footer-list-title">Nos services</p></li>
+              <li><span class="footer-link">Loyer garanti</span></li>
+              <li><span class="footer-link">Gestion clé en main</span></li>
+              <li><span class="footer-link">Flexibilité du bail</span></li>
+              <li><span class="footer-link">Sécurité & assurance</span></li>
+              <li><span class="footer-link">Entretien quotidien</span></li>
+            </ul>
+
+            <ul class="footer-list" role="list">
+              <li><p class="footer-list-title">Nos engagements</p></li>
+              <li><p class="footer-link">Sérénité garantie</p></li>
+              <li><p class="footer-link">Loyer fixe chaque mois</p></li>
+              <li><p class="footer-link">Flexibilité du bail</p></li>
+              <li><p class="footer-link">Sécurité & assurance</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">© Copyright <a href="#header">RBTI</a> 2025</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assets/js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
