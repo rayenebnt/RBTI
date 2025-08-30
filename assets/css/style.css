@@ -1476,3 +1476,22 @@ html, body{ overflow-x: hidden; }
   color: rgba(255,255,255,.92);
 }
 
+/* ===== Centrer UNIQUEMENT la barre du haut en responsive ===== */
+@media (max-width: 991.98px){
+  .header-top { text-align: center; }
+  .header-top .container {
+    justify-content: center !important;
+  }
+  .header-top-list {
+    justify-content: center !important;
+  }
+  .header-top .wrapper,
+  .header-top-cta {
+    margin-left: 0 !important;
+    justify-content: center !important;
+  }
+  .header-support {
+    text-align: center;
+    white-space: normal; /* garde tout visible, enlève si tu préfères une seule ligne */
+  }
+}
